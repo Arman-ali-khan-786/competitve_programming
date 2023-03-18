@@ -16,6 +16,7 @@ class Node
 
 
 // -------------------------------------------------------------------------------
+
 class Solution
 {
     //Function to return the level order traversal of a tree.
