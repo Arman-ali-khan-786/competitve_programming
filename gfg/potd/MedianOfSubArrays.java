@@ -6,25 +6,25 @@ import java.util.Arrays;
 
 public class MedianOfSubArrays {
     long helper(int A[],int n,int m){
-        int[] mp = new int[2*n+1];
-        Arrays.fill(mp,0);
-        long cur = n,tot=0,ans=0;
-        mp[(int)cur]++;
+        int[] map = new int[2*n+1];
+        Arrays.fill(map,0);
+        long cur = n,tot=0,res=0;
+        map[(int)cur]++;
         for(int i = 0 ; i<n ; i++){
             int x = -1;
             if(A[i]>=m){
                 x=1;
             }
             if(x==-1){
-                tot-=mp[(int)(cur+x)];
+                tot-=map[(int)(cur+x)];
             }else{
-                tot +=mp[(int)cur];
+                tot +=map[(int)cur];
             }
             cur+=x;
-            ans+=tot;
-            mp[(int)cur]++;
+            res+=tot;
+            map[(int)cur]++;
         }
-        return ans;
+        return res;
     }
     long countSubarray(int N, int A[], int M) 
     { 
