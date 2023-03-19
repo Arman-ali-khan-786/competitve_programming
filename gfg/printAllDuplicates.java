@@ -2,6 +2,9 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class printAllDuplicates {
+
+    // to print all the duplicates and their counts in the input string 
+
     public static void main(String[] args) {
         String str = "test  String";
         printDuplicates(str.toLowerCase());
